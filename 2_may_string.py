@@ -37,7 +37,7 @@ print(f"temperature in fahrenheit is: {f}")
 
 
 # Question 4
-# Making function for split,upper,lower,strip,replace
+# Making manualfunction for split,replace,upper,lower,strip
 
 def split(string,limiter=" "):
     a=[]
@@ -57,7 +57,7 @@ print(x)
 
 ######################################################
 def replace(sentence,char,rchar):
-    new=""
+    new=""    
     for i in sentence:
         if i == char:
             new+=rchar
@@ -88,9 +88,9 @@ def lower(s):
 def stripp(s):
     begin = 0
     end =len(s)-1
-    while s[begin]==" " :
-            begin+=1
-    while s[end]==" ":
+    while s[begin]==" " :        #this loop is used for lstrip
+            begin+=1        
+    while s[end]==" ":           #this loop is used for rstrip
             end -=1
     return s[begin:end+1]
 
