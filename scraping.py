@@ -33,7 +33,7 @@ while len(companies) < 30 and scroll_count < 10:
                 website = "N/A"
            
             try:
-                phone = driver.find_element(By.XPATH, '//button[contains(@class,"CsEnBe") and contains(@aria-label = "Phone")]').get_attribute('aria-label').split()[-1].strip()
+                phone = driver.find_element(By.XPATH, '//button[contains(@class,"CsEnBe") and contains(@aria-label, "Phone")]').get_attribute('aria-label').split()[-1].strip()
             except Exception as e:
                 print("phone error:", e)               
                 phone = "N/A"        
